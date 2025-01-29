@@ -1,0 +1,545 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header / Navigation Bar */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(33, 15%, 12%);
+    padding: 15px 0;
+    z-index: 1000;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .logo {
+    margin-right: 20px;
+  }
+  
+  nav .logo img {
+    height: 50px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Adjust content padding to prevent overlap */
+  body {
+    padding-top: 70px; /* Adjust this value if navbar height changes */
+  }
+  
+  /* Home Page */
+  #home {
+    background-image: url('img2.jpeg'); /* Replace with your image file path */
+    background-size: 100% 100%; /* Stretches the image to cover the full section */
+    background-position: center center; /* Ensures the image is centered */
+    background-repeat: no-repeat; /* Prevents repeating the background image */
+    height: 100vh; /* Ensures the section takes the full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* White text color for visibility */
+}
+
+
+  
+  #home .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .image img {
+    width: 120px; /* Slightly larger size for a professional look */
+    height: 120px; /* Ensures the height matches the width for a perfect circle */
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover; /* Ensures the image fits the circle nicely */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow to give depth */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect on hover */
+  }
+  
+  .image img:hover {
+    transform: scale(1.1); /* Slight zoom effect when hovering over the image */
+  }
+  
+ /* About Us Section */
+#about-us {
+  background: linear-gradient(to right, #d59f69, #e16038);  /* Orange and Red Gradient */
+  padding: 80px 10%;
+  text-align: center;
+  border-radius: 12px;  /* Added rounded corners */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Header for About Section */
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  color: #fff;  /* White text for header */
+  text-transform: uppercase;  /* Added text transform for style */
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #f5f5f5;  /* Slightly lighter text color for readability */
+}
+
+/* About Content Container */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;  /* Ensures content doesn't overflow on small screens */
+}
+
+/* Left Section: Image */
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 3px solid #fff;  /* White border for contrast */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;  /* Smooth zoom effect */
+}
+
+.profile-image:hover {
+  transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Right Section: Content */
+.about-content {
+  flex: 2;
+  text-align: left;
+  color: #fff;  /* White text for contrast */
+}
+
+.about-content h1 {
+  font-size: 2.5rem;  /* Increased font size for better prominence */
+  color: #181115;  /* Deep dark red color */
+  margin-bottom: 20px;  /* Increased bottom margin for better spacing */
+  font-weight: bold;  /* Make the text bold for a stronger presence */
+  text-transform: capitalize;  /* Capitalize first letter of each word */
+  letter-spacing: 1px;  /* Add some space between letters for better readability */
+  line-height: 1.4;  /* Adjust line height for spacing */
+  text-shadow: 2px 2px 8px rgba(226, 10, 10, 0.3);  /* Add a stronger shadow to make the text pop */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.about-content h1:hover {
+  transform: scale(1.05);  /* Slightly enlarge the text on hover */
+  color: #e45e05;  /* Change text color to orange on hover */
+}
+
+.about-content h4 {
+  font-size: 1.2rem;
+  color: #df4512;  /* Yellowish tone for sub-heading */
+  
+}
+
+
+.about-content p {
+  font-size: 1rem;
+  color: #f5f5f5;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-content {
+      text-align: center;
+  }
+
+  .profile-image {
+      margin-top: 20px;
+  }
+}
+
+  
+#vlog {
+    background-color: #eaeaea;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .vlog-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusting to accommodate slightly larger videos */
+    gap: 20px; /* Space between videos */
+  }
+  
+  .video {
+    background-color: #fff; /* Keeps the container white */
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: none; /* Removing the shadow for a cleaner look */
+  }
+  
+  video {
+    width: 80%; /* Makes the video 75% of its container width */
+    height: auto;
+    margin: 0 auto; /* Centers the video horizontally */
+    display: block; /* Ensures the video behaves as a block element, allowing it to be centered */
+  }
+  /*services */
+  /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Services Section */
+#services {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ececec, #ffffff);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Services Grid */
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Service Cards */
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* More Button */
+.more-btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: #222;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background: #ff9900;
+}
+
+/* Hover Effects */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+  /*Product */
+  /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Product Section */
+#Product {
+  text-align: center;
+  padding: 50px 20px;
+  background: url('road-img.png') no-repeat center center;
+  background-size: cover; /* Makes the image cover the entire background */
+  color: white;  /* Ensures the text is visible over the background */
+
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* Product Grid */
+.product-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Hover Effects */
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+  
+  
+  
+ /* Contact Section */
+#contact-us {
+  background: #f7f5f2;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side: Image */
+.contact-image {
+  flex: 1;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side: Form & Contact Info */
+.contact-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  border-bottom: 2px solid #000;
+  padding: 10px;
+  font-size: 1rem;
+  background: none;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.contact-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-content {
+    padding: 20px;
+  }
+}
